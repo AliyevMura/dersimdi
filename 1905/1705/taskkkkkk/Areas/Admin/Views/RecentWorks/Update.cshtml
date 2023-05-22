@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@model RecentWorks
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="RecentWorks">
+                    <span class="text text-danger" asp-validation-for="Name"></span>
+
+
+                    <label asp-for="Description"></label>
+                    <input asp-for="Description" class="form-control" placeholder="RecentWorks Description">
+                    <span class="text text-danger" asp-validation-for="Description"></span>
+
+                    <label asp-for="ImagePath"></label>
+                    <input asp-for="ImagePath" class="form-control" placeholder="RecentWorks ImagePath">
+                    <span class="text text-danger" asp-validation-for="ImagePath"></span>
+                </div>
+                <button type="submit" class="btn btn-primary me-2 text-light">Edit</button>
+                <button class="btn btn-light" asp-action="Index">Go Back</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
